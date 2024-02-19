@@ -5,9 +5,9 @@
 #}
 resource "aws_instance" "kamstrup" {
   ami                    = var.AMIS[var.REGION]
-  instance_type          = "t2.medium"
+  instance_type          = "t3.medium"
   subnet_id              = aws_subnet.sani-pub-1.id
-  key_name               = "SANI"
+  key_name               = "ProjectR"
   vpc_security_group_ids = [aws_security_group.sani_sg.id]
   tags = {
     Name = "kamstrup"
